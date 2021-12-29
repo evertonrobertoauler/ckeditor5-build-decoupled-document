@@ -30,7 +30,7 @@ import Table from "@ckeditor/ckeditor5-table/src/table";
 import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
 import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformation";
 import PageBreak from "@ckeditor/ckeditor5-page-break/src/pagebreak";
-import Pagination from "@ckeditor/ckeditor5-pagination/src/pagination";
+// import Pagination from "@ckeditor/ckeditor5-pagination/src/pagination";
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -60,7 +60,7 @@ DecoupledEditor.builtinPlugins = [
   TableToolbar,
   TextTransformation,
   PageBreak,
-  Pagination,
+  // Pagination,
 ];
 
 // Editor configuration.
@@ -94,26 +94,26 @@ DecoupledEditor.defaultConfig = {
       "blockquote",
       "insertTable",
       "|",
-      "previousPage",
-      "nextPage",
-      "pageNavigation",
+      // "previousPage",
+      // "nextPage",
+      // "pageNavigation",
       "pageBreak",
       "|",
       "undo",
       "redo",
     ],
   },
-  pagination: {
-    pageWidth: "21cm",
-    pageHeight: "29.7cm",
+  // pagination: {
+  //   pageWidth: "21cm",
+  //   pageHeight: "29.7cm",
 
-    pageMargins: {
-      top: "20mm",
-      bottom: "20mm",
-      right: "12mm",
-      left: "12mm",
-    },
-  },
+  //   pageMargins: {
+  //     top: "20mm",
+  //     bottom: "20mm",
+  //     right: "12mm",
+  //     left: "12mm",
+  //   },
+  // },
   // This value must be kept in sync with the language defined in webpack.config.js.
   language: "pt-br",
 };
