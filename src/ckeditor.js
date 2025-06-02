@@ -21,6 +21,12 @@ import BlockQuote from "@ckeditor/ckeditor5-block-quote/src/blockquote";
 import Heading from "@ckeditor/ckeditor5-heading/src/heading";
 import Indent from "@ckeditor/ckeditor5-indent/src/indent";
 import IndentBlock from "@ckeditor/ckeditor5-indent/src/indentblock";
+import Image from "@ckeditor/ckeditor5-image/src/image";
+import ImageCaption from "@ckeditor/ckeditor5-image/src/imagecaption";
+import ImageToolbar from "@ckeditor/ckeditor5-image/src/imagetoolbar";
+import ImageStyle from "@ckeditor/ckeditor5-image/src/imagestyle";
+import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
+import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 import Link from "@ckeditor/ckeditor5-link/src/link";
 import List from "@ckeditor/ckeditor5-list/src/list";
 import ListStyle from "@ckeditor/ckeditor5-list/src/liststyle";
@@ -51,6 +57,12 @@ DecoupledEditor.builtinPlugins = [
   Heading,
   Indent,
   IndentBlock,
+  Image,
+  ImageCaption,
+  ImageToolbar,
+  ImageStyle,
+  ImageUpload,
+  ImageResize,
   Link,
   List,
   ListStyle,
@@ -93,6 +105,7 @@ DecoupledEditor.defaultConfig = {
       "link",
       "blockquote",
       "insertTable",
+      "imageUpload",
       "|",
       // "previousPage",
       // "nextPage",
@@ -115,5 +128,17 @@ DecoupledEditor.defaultConfig = {
   //   },
   // },
   // This value must be kept in sync with the language defined in webpack.config.js.
+  image: {
+    toolbar: [
+      "imageStyle:inline",
+      "imageStyle:block",
+      "imageStyle:side",
+      "imageStyle:alignLeft",
+      "imageStyle:alignCenter",
+      "imageStyle:alignRight",
+      "|",
+      "imageTextAlternative",
+    ],
+  },
   language: "pt-br",
 };
